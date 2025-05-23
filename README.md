@@ -7,21 +7,18 @@
 If a recent update causes issues, you can roll back to the previous deployment:
 
 ```bash
-# Roll back to the previous rpm-ostree deployment
 sudo rpm-ostree rollback
 ```
 
-To prevent the system from automatically updating to a broken version again:
+Disable automatic updates too prevent the system from updating to a broken version again:
 
 ```bash
-# Disable automatic updates
 sudo systemctl disable rpm-ostreed-automatic.timer
 ```
 
-Once a new version is safe to use:
+Once a new version is safe to use, you can re-enable automatic updates:
 
 ```bash
-# Re-enable automatic updates
 sudo systemctl enable rpm-ostreed-automatic.timer
 ```
 
@@ -45,7 +42,7 @@ After running `usermod`, you need to log out and back in (or reboot) for the gro
 
 ### Install the Nextcloud Synchronization Client
 
-We need to layer the Nextcloud Synchronization Client with rpm-ostree for better integration with [Nautilus](https://apps.gnome.org/de/Nautilus/).
+Layer the Nextcloud Synchronization Client with rpm-ostree for better integration with [Nautilus](https://apps.gnome.org/de/Nautilus/).
 
 ```bash
 # Install Nextcloud Synchronization Client
