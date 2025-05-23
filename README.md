@@ -2,7 +2,7 @@
 
 ## GNOME Settings
 
-Customize your GNOME desktop and apps using these gsettings commands.
+Customize your GNOME desktop and apps using these `gsettings` commands.
 
 ### Top Bar Customization
 
