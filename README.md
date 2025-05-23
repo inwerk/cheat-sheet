@@ -31,3 +31,52 @@ sudo rpm-ostree install nextcloud-client
 # Reboot to apply changes
 systemctl reboot
 ```
+
+## toolbx
+
+Here are the toolbx environments I use to isolate development tools.
+
+### Git
+
+```bash
+# Create and enter the Git toolbx
+toolbox create git
+toolbox enter git
+
+# Update package list
+sudo dnf update
+
+# Configure Git credentials
+read -p "Enter your GitHub user name: " GITHUB_USERNAME
+read -p "Enter your (private) GitHub email: " GITHUB_EMAIL
+
+git config --global user.name "$GITHUB_USERNAME"
+git config --global user.email "$GITHUB_EMAIL"
+
+# Install GitHub CLI
+sudo dnf install gh
+sudo dnf update gh
+
+# Authenticate GitHub CLI
+gh auth login
+
+# Exit toolbox
+exit
+```
+
+### Python
+
+```bash
+# Create and enter the Python toolbx
+toolbox create python
+toolbox enter python
+
+# Update package list
+sudo dnf update
+
+# Install the uv Python package manager
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Exit toolbox
+exit
+```
