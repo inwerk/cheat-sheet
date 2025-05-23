@@ -1,5 +1,70 @@
 # Cheat Sheet
 
+## Flatpak
+
+### Add Flathub Repositories
+
+```bash
+# Add Flathub and Flathub Beta as remote sources
+flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --user --if-not-exists flathub-beta https://flathub.org/beta-repo/flathub-beta.flatpakrepo
+```
+
+### Install Additional GNOME Apps
+
+```bash
+# [GNOME Boxes](https://apps.gnome.org/Boxes/)
+flatpak install flathub org.gnome.Boxes --user --noninteractive --or-update
+
+# [GNOME Videos](https://apps.gnome.org/Totem/)
+flatpak install flathub org.gnome.Totem --user --noninteractive --or-update
+
+# [GNOME Resources](https://apps.gnome.org/Resources/)
+flatpak install flathub net.nokyan.Resources --user --noninteractive --or-update
+```
+
+### Install Other Apps
+
+```bash
+# [Anki](https://ankiweb.net)
+flatpak install flathub net.ankiweb.Anki --user --noninteractive --or-update
+
+# [Bitwarden](https://bitwarden.com)
+flatpak install flathub com.bitwarden.desktop --user --noninteractive --or-update
+
+# [Discord](https://discord.com/)
+flatpak install flathub com.discordapp.Discord --user --noninteractive --or-update
+flatpak install flathub-beta com.discordapp.DiscordCanary --user --noninteractive --or-update
+
+# [JetBrains IDEs](https://www.jetbrains.com/)
+flatpak install flathub com.jetbrains.IntelliJ-IDEA-Ultimate --user --noninteractive --or-update
+flatpak install flathub com.jetbrains.PyCharm-Professional --user --noninteractive --or-update
+flatpak install flathub com.jetbrains.WebStorm --user --noninteractive --or-update
+
+# [Obsidian](https://obsidian.md/)
+flatpak install flathub md.obsidian.Obsidian --user --noninteractive --or-update
+
+# [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager/)
+flatpak install flathub org.raspberrypi.rpi-imager --user --noninteractive --or-update
+
+# [Signal Desktop](https://signal.org/)
+flatpak install flathub org.signal.Signal --user --noninteractive --or-update
+
+# [Thunderbird](https://www.thunderbird.net/)
+flatpak install flathub org.mozilla.Thunderbird --user --noninteractive --or-update
+
+# [TeXstudio](https://www.texstudio.org/)
+flatpak install flathub org.texstudio.TeXstudio --user --noninteractive --or-update
+flatpak install flathub org.freedesktop.Sdk.Extension.texlive//24.08 --user --noninteractive --or-update
+```
+
+### Cleanup
+
+```bash
+# Remove unused Flatpak runtimes and packages
+flatpak uninstall --unused --noninteractive
+```
+
 ## GNOME Settings
 
 Customize your GNOME desktop and apps using these `gsettings` commands.
