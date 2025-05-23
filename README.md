@@ -22,7 +22,7 @@ After running `usermod`, you need to log out and back in (or reboot) for the gro
 
 ### Install the Nextcloud Synchronization Client
 
-Layering the Nextcloud Synchronization Client with rpm-ostree for better integration with [Nautilus](https://apps.gnome.org/de/Nautilus/).
+We need to layer the Nextcloud Synchronization Client with rpm-ostree for better integration with [Nautilus](https://apps.gnome.org/de/Nautilus/).
 
 ```bash
 # Install Nextcloud Synchronization Client
