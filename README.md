@@ -1,5 +1,49 @@
 # Cheat Sheet
 
+## GNOME Settings
+
+Customize your GNOME desktop and apps using these gsettings commands.
+
+### Top Bar Customization
+
+```bash
+# Show the date in the top
+gsettings set org.gnome.desktop.interface clock-show-date true
+
+# Show the weekday in the top bar
+gsettings set org.gnome.desktop.interface clock-show-weekday true
+
+# Show battery percentage in the top bar
+gsettings set org.gnome.desktop.interface show-battery-percentage true
+```
+
+### File Manager (Nautilus)
+
+```bash
+# Set the default view to list-view in Nautilus
+gsettings set org.gnome.nautilus.preferences default-folder-viewer 'list-view'
+```
+
+### Terminal
+
+```bash
+# Set terminal theme to follow system theme
+gsettings set org.gnome.Terminal.Legacy.Settings theme-variant 'system'
+```
+
+### Text Editor
+
+```bash
+# Disable session restore on startup
+gsettings set org.gnome.TextEditor restore-session false
+
+# Enable line numbers
+gsettings set org.gnome.TextEditor show-line-numbers true
+
+# Disable spell checking
+gsettings set org.gnome.TextEditor spellcheck false
+```
+
 ## rpm-ostree
 
 ### Roll Back to the Previous System Version
@@ -42,7 +86,7 @@ After running `usermod`, you need to log out and back in (or reboot) for the gro
 
 ### Install the Nextcloud Synchronization Client
 
-Layer the Nextcloud Synchronization Client with rpm-ostree for better integration with [Nautilus](https://apps.gnome.org/de/Nautilus/).
+Layer the Nextcloud Synchronization Client with rpm-ostree for better integration with Nautilus.
 
 ```bash
 # Install Nextcloud Synchronization Client
