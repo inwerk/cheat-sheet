@@ -2,6 +2,29 @@
 
 ## rpm-ostree
 
+### Roll Back to the Previous System Version
+
+If a recent update causes issues, you can roll back to the previous deployment:
+
+```bash
+# Roll back to the previous rpm-ostree deployment
+sudo rpm-ostree rollback
+```
+
+To prevent the system from automatically updating to a broken version again:
+
+```bash
+# Disable automatic updates
+sudo systemctl disable rpm-ostreed-automatic.timer
+```
+
+Once a new version is safe to use:
+
+```bash
+# Re-enable automatic updates
+sudo systemctl enable rpm-ostreed-automatic.timer
+```
+
 ### Install Docker
 
 ```bash
@@ -36,7 +59,7 @@ systemctl reboot
 
 Here are the toolbx environments I use to isolate development tools.
 
-### Git
+### Git Environment
 
 ```bash
 # Create and enter the Git toolbx
@@ -64,7 +87,7 @@ gh auth login
 exit
 ```
 
-### Python
+### Python Environment
 
 ```bash
 # Create and enter the Python toolbx
